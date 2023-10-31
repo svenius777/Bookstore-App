@@ -1,0 +1,96 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3DAC71CE-F333-475A-A1A0-EF98AEB376C6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KatalogKnjige</RootNamespace>
+    <AssemblyName>KatalogKnjige</AssemblyName>
+    <OutputName>KatalogKnjige</OutputName>
+    <CWOutputType>Exe</CWOutputType>
+    <DefineConstants>_AnyScreenPresent_=&gt;1%3b_ABCDllMode_=&gt;0%3b_ABCLinkMode_=&gt;1%3b_WebCoreDllMode_=&gt;0%3b_WebCoreLinkMode_=&gt;1%3b_WebRunDllMode_=&gt;0%3b_WebRunLinkMode_=&gt;1%3b_IbcDllMode_=&gt;1%3b_IbcLinkMode_=&gt;0%3b_WebAbcDllMode_=&gt;0%3b_WebAbcLinkMode_=&gt;1</DefineConstants>
+    <Model>Dll</Model>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="KatalogKnjige.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="KatalogKnjige001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="KatalogKnjige002.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="KatalogKnjige003.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="KATALOGKNJIGE_BC.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="KatalogKnjige_BC0.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="KATAL_WB.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="WBSTD.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="WBSTD2.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <None Include="7z.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="AnyScreenPDF.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="ClaAnyScreen.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="ClaAnyScreenNet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="skeleton.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FileDriver Include="DOS" />
+    <FileDriver Include="TOPSPEED" />
+    <Library Include="C%25V%25HTM%25X%25.LIB" />
+    <Library Include="C%25V%25IBC%25X%25.LIB" />
+    <Library Include="C%25V%25LAY%25X%25.LIB" />
+    <Library Include="C%25V%25OLE%25X%25%25L%25.LIB" />
+    <Library Include="ClaAnyScreen.lib" />
+    <Library Include="ClaAnyScreenNet.lib" />
+    <Library Include="WBDUMMY.HTM" />
+    <Library Include="WBUNAUTH.HTM" />
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>

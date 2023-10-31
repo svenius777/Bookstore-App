@@ -1,0 +1,4 @@
+  MEMBER('KatalogKnjige.clw')
+  MAP
+  END
+  INCLUDE('KATALOGKNJIGE003.INC'),ONCE
